@@ -1,0 +1,251 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* GitHub Dark Theme Design System */
+
+@layer base {
+  :root {
+    /* GitHub Dark Theme Colors */
+    --background: 220 13% 9%;
+    --foreground: 220 9% 89%;
+
+    --card: 220 13% 11%;
+    --card-foreground: 220 9% 89%;
+
+    --popover: 220 13% 11%;
+    --popover-foreground: 220 9% 89%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 220 13% 9%;
+
+    --secondary: 220 13% 15%;
+    --secondary-foreground: 220 9% 89%;
+
+    --muted: 220 13% 15%;
+    --muted-foreground: 220 9% 60%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 220 13% 9%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 220 9% 89%;
+
+    --border: 220 13% 15%;
+    --input: 220 13% 15%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+
+    /* GitHub Theme Specific Colors */
+    --github-success: 137 92% 49%;
+    --github-warning: 35 84% 62%;
+    --github-danger: 0 84% 60%;
+    --github-info: 217 91% 60%;
+
+    /* Custom Design Tokens */
+    --text-primary: 220 9% 89%;
+    --text-secondary: 220 9% 70%;
+    --text-muted: 220 9% 50%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(270 91% 65%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(220 13% 15%) 0%, hsl(220 13% 11%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(220 13% 9%) 0%, hsl(217 91% 15%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(220 13% 9% / 0.5);
+    --shadow-md: 0 4px 6px -1px hsl(220 13% 9% / 0.5);
+    --shadow-lg: 0 10px 15px -3px hsl(220 13% 9% / 0.5);
+    --shadow-xl: 0 20px 25px -5px hsl(220 13% 9% / 0.5);
+    --shadow-glow: 0 0 20px hsl(217 91% 60% / 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Hero Gradient Background */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  /* Primary Gradient */
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  /* Secondary Gradient */
+  .gradient-secondary {
+    background: var(--gradient-secondary);
+  }
+
+  /* Glow Effect */
+  .glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Smooth Transitions */
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  /* Bounce Transitions */
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+
+  /* Hover Effects */
+  .hover-lift {
+    @apply transition-smooth;
+  }
+  
+  .hover-lift:hover {
+    @apply -translate-y-1;
+    box-shadow: var(--shadow-xl);
+  }
+
+  /* Text Gradient */
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Icon Hover Effect */
+  .icon-hover {
+    @apply transition-smooth hover:scale-110 hover:text-primary;
+  }
+
+  /* Service Card Animation */
+  .service-card {
+    @apply transition-smooth hover-lift border border-border bg-card;
+    background: var(--gradient-secondary);
+  }
+
+  .service-card:hover {
+    border-color: hsl(var(--primary));
+    box-shadow: var(--shadow-glow);
+  }
+}
+
+@layer utilities {
+  /* Custom Text Colors */
+  .text-primary-custom {
+    color: hsl(var(--text-primary));
+  }
+
+  .text-secondary-custom {
+    color: hsl(var(--text-secondary));
+  }
+
+  .text-muted-custom {
+    color: hsl(var(--text-muted));
+  }
+
+  /* GitHub Theme Colors */
+  .text-github-success {
+    color: hsl(var(--github-success));
+  }
+
+  .text-github-warning {
+    color: hsl(var(--github-warning));
+  }
+
+  .text-github-danger {
+    color: hsl(var(--github-danger));
+  }
+
+  .text-github-info {
+    color: hsl(var(--github-info));
+  }
+
+  /* Background GitHub Colors */
+  .bg-github-success {
+    background-color: hsl(var(--github-success));
+  }
+
+  .bg-github-warning {
+    background-color: hsl(var(--github-warning));
+  }
+
+  .bg-github-danger {
+    background-color: hsl(var(--github-danger));
+  }
+
+  .bg-github-info {
+    background-color: hsl(var(--github-info));
+  }
+}
