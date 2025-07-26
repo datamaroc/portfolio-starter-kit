@@ -1,5 +1,5 @@
 # Data/AI Engineer Portfolio
-A sleek, modern, and easily customizable portfolio built with Vite, React, TypeScript, and Tailwind CSS. Designed for data scientists, AI engineers to showcase my projects, skills, and experience in a professional way.
+A sleek, modern, and easily customizable portfolio built with Vite, React, TypeScript, and Tailwind CSS. Designed for data scientists, AI engineers to showcase my projects, skills, and experience in a professional way. 
 
 # Features
 - Fully Responsive: Looks great on all devices, from mobile phones to desktops.
